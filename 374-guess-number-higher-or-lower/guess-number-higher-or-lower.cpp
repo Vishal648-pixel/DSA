@@ -5,10 +5,11 @@ public:
         int high=n;
         while(low<=high){
             int mid=low+(high-low)/2;
-            if (guess(mid)==0){ //mid==pick 
+            int val=guess(mid);
+            if (val==0){ //mid==pick 
                 return mid ;
             }
-            else if (guess(mid)==-1) {//mid>pick
+            else if (val==-1) {//mid>pick
                 high=mid-1;
             }
             else{ //mid<pick
